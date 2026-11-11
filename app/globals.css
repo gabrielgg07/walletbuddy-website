@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Dark navy for text */
+  --color-navy-700: #24324a;
+  --color-navy-800: #172238;
+  --color-navy-900: #0f1b2d;
+
+  /* Subtle financial green accent */
+  --color-brand-50: #ecfdf3;
+  --color-brand-600: #12915a;
+  --color-brand-700: #0c7548;
+  --color-brand-800: #0b5d3b;
+}
+
+/* Markdown typography theme, applied as `prose prose-wallet`. */
+@utility prose-wallet {
+  --tw-prose-body: var(--color-navy-700);
+  --tw-prose-headings: var(--color-navy-900);
+  --tw-prose-lead: var(--color-navy-700);
+  --tw-prose-links: var(--color-brand-700);
+  --tw-prose-bold: var(--color-navy-900);
+  --tw-prose-counters: var(--color-slate-500);
+  --tw-prose-bullets: var(--color-brand-600);
+  --tw-prose-hr: var(--color-slate-200);
+  --tw-prose-quotes: var(--color-navy-800);
+  --tw-prose-quote-borders: var(--color-brand-600);
+  --tw-prose-captions: var(--color-slate-500);
+  --tw-prose-code: var(--color-navy-900);
+  --tw-prose-pre-code: var(--color-slate-100);
+  --tw-prose-pre-bg: var(--color-navy-900);
+  --tw-prose-th-borders: var(--color-slate-300);
+  --tw-prose-td-borders: var(--color-slate-200);
+
+  & h1 {
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+  & h2,
+  & h3 {
+    letter-spacing: -0.015em;
+    font-weight: 600;
+  }
+  & a {
+    font-weight: 500;
+    text-underline-offset: 3px;
+  }
+  & a:hover {
+    color: var(--color-brand-800);
+  }
+}
